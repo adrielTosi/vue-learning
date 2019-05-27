@@ -7,6 +7,7 @@ import wysiwyg from "vue-wysiwyg";
 import "vue-wysiwyg/dist/vueWysiwyg.css";
 
 import router from "./router";
+import store from "./store/index";
 
 Vue.use(vueNoty);
 Vue.use(VueDisqus);
@@ -18,6 +19,7 @@ const user = authData ? JSON.parse(authData) : {};
 
 new Vue({
   router,
+  store,
   data: {
     auth: user
   },
